@@ -1,3 +1,12 @@
+/* clearfix */
+.clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
 /* opacity */
 
 .opacity (@opacity: 0.5) {
