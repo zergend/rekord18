@@ -1,0 +1,59 @@
+.front {    
+  .clearfix();  
+  position: relative;
+
+  &__slider {
+    .clearfix();
+    .box-shadow(0, 0, 10px);
+    &__img {
+      .size-600x300();
+      float: left;
+      overflow: hidden;
+    }
+
+    &__info {
+      .size-300x300();
+      float: right;
+      background: @footer-bg-color;
+      color: @light-text-color;
+    }
+  }
+
+  &__content {
+    .clearfix();
+  }
+
+  &__links {
+    .clearfix();    
+    background: #F2F2F2;
+  }
+
+  &__news {
+    box-sizing: border-box;
+    width: 600px;
+    float: left;
+    padding: 20px;
+    padding-right: 10px;
+    
+
+    & h2 {
+      font-size: 24px;
+      text-align: left;
+      color: @rekord-blue;
+    }
+  }
+
+  &__anounce {
+    box-sizing: border-box;
+    width: 300px;
+    float: right;
+    padding: 20px;
+    padding-right: 10px;
+
+    & h2 {
+      font-size: 24px;
+      text-align: left;
+      color: @rekord-red;
+    }
+  }
+}

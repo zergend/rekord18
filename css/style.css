@@ -69,6 +69,7 @@ figure {
 hr {
   overflow: visible;
   /* 2 */
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -111,6 +112,7 @@ a:hover {
 abbr[title] {
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */
   border-bottom: none;
@@ -292,6 +294,7 @@ fieldset {
 legend {
   display: table;
   /* 1 */
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   max-width: 100%;
@@ -325,6 +328,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -405,16 +409,17 @@ template {
 /* START */
 /* *********************************** */
 /*  2. Custom Normalize                */
-body {
-  margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
-  text-transform: uppercase;
+  font-weight: 700;
   color: #000000;
-  background-color: #ffffff;
-  font-family: 'Roboto Condensed', Tahoma, Verdana, Arial, sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.3;
+  text-transform: uppercase;
 }
 h1,
 h2,
@@ -423,16 +428,15 @@ p {
   margin: 0;
   margin-bottom: 10px;
 }
+p {
+  font-family: 'Roboto', sans-serif;
+}
 h1 {
-  color: #000000;
   font-size: 21px;
-  font-weight: bold;
   line-height: 26px;
 }
 h2 {
-  color: #000000;
   font-size: 21px;
-  font-weight: bold;
   line-height: 21px;
 }
 a {
@@ -472,6 +476,18 @@ td {
 }
 /* clearfix */
 /* container */
+.size-600x300 {
+  width: 600px;
+  height: 300px;
+}
+.size-300x300 {
+  width: 300px;
+  height: 300px;
+}
+.size-tmb {
+  width: 225px;
+  height: 150px;
+}
 /* opacity */
 /* box shadow */
 /* text shadow */
@@ -479,5 +495,138 @@ td {
 /* column of text */
 /* BLOCKS */
 body {
-  background: url(img/bg-r.jpg) 100% 0 no-repeat fixed, url(img/bg-r.jpg) 0 0 no-repeat fixed;
+  margin: 0;
+  color: #000000;
+  font-family: 'Roboto Condensed', Tahoma, Verdana, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.3;
+  background-color: #ffffff;
+  background: url(../img/bg-body.jpg) 100% 0 no-repeat fixed, url(../img/bg-body.jpg) 0 0 no-repeat fixed;
+}
+.wrapper {
+  display: block;
+  margin: 0 auto;
+  width: 1180px;
+  background: #ffffff url("../img/bg-wrapper.jpg") 100% 0 no-repeat;
+  -webkit-box-shadow: 0 0 10px #666;
+  box-shadow: 0 0 10px #666;
+}
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+header {
+  min-height: 150px;
+}
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+header .logo {
+  float: left;
+  padding-left: 30px;
+  padding-top: 21px;
+}
+aside {
+  position: absolute;
+  width: 280px;
+  top: 0;
+  height: 100%;
+  float: left;
+  background-color: #0058A7;
+  -webkit-box-shadow: 0 0 10px #666;
+  box-shadow: 0 0 10px #666;
+}
+aside::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+main {
+  float: right;
+}
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.front {
+  position: relative;
+}
+.front::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.front__slider {
+  -webkit-box-shadow: 0 0 10px #666;
+  box-shadow: 0 0 10px #666;
+}
+.front__slider::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.front__slider__img {
+  width: 600px;
+  height: 300px;
+  float: left;
+  overflow: hidden;
+}
+.front__slider__info {
+  width: 300px;
+  height: 300px;
+  float: right;
+  background: #446078;
+  color: #ffffff;
+}
+.front__content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.front__links {
+  background: #F2F2F2;
+}
+.front__links::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.front__news {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 600px;
+  float: left;
+  padding: 20px;
+  padding-right: 10px;
+}
+.front__news h2 {
+  font-size: 24px;
+  text-align: left;
+  color: #0058A7;
+}
+.front__anounce {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 300px;
+  float: right;
+  padding: 20px;
+  padding-right: 10px;
+}
+.front__anounce h2 {
+  font-size: 24px;
+  text-align: left;
+  color: #e31d24;
+}
+footer {
+  background-color: #446078;
+}
+footer::after {
+  content: "";
+  display: table;
+  clear: both;
 }
