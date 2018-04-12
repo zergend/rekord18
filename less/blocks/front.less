@@ -29,17 +29,45 @@
   }
 
   &__news {
+    .clearfix();
     box-sizing: border-box;
     width: 600px;
     float: left;
     padding: 20px;
-    padding-right: 10px;
-    
+    padding-right: 10px;    
 
     & h2 {
       font-size: 24px;
       text-align: left;
       color: @rekord-blue;
+    }
+
+    & article {
+      .clearfix();
+    }
+
+    &--date {   
+      box-sizing: border-box;       
+      float: left;
+      width: 55px;
+      padding-right: 5px;
+      text-align: center;
+    }
+
+    &--day,
+    &--month {
+      border-bottom: solid 1px @rekord-blue;
+    }
+
+    &--foto {
+      float: left;
+      width: 225px;
+    }
+
+    &--title {
+      float: right;
+      margin-left: 20px;
+      width: 280px;
     }
   }
 
