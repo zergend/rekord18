@@ -75,10 +75,27 @@
     }
 
     &--title {
+      position: relative;
+      min-height: 150px;
+      font-size: 16px;
       float: right;
-      /* padding-left: 15px; */
       box-sizing: border-box;
       width: 280px;
+    }
+
+    &--more {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-style: italic;
+    }
+
+    &--all {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-style: italic;
+      font-size: 21px;
+      font-weight: 700;
     }
   }
 
@@ -88,10 +105,39 @@
     float: right;
     padding: 20px;
     padding-right: 10px;
+    font-size: 16px;
+
+    & article {
+      margin-top: 20px;
+      padding-bottom: 20px;      
+      border-bottom: dotted 1px @rekord-red;
+    }
+
+
+    & a {
+      color: @rekord-red;
+    }
 
     & h2 {
       font-size: 24px;
       text-align: left;
+      color: @rekord-red;
+    }
+
+    &--title {
+      margin-bottom: 10px;
+    }
+
+    &--more {            
+      font-style: italic;
+    }
+
+    &--all {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-style: italic;
+      font-size: 21px;
+      font-weight: 700;
       color: @rekord-red;
     }
   }
